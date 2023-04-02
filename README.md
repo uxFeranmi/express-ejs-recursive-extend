@@ -63,6 +63,7 @@ to have the view rendered within the layout you specify.
 <% extend('../layouts/app-shell', { title: 'Hello, world!' }) %>
 
 <h1>Hello, <%= name || 'World' %>!</h1>
+<p>You are here: <i><%= path %></i></p>
 ```
 
 ```ejs
@@ -116,6 +117,7 @@ at the root path `/`, it will respond with the following HTML.
   <body>
     <main>
       <h1>Hello, Tinky Winky!</h1>
+      <p>You are here: <i>/</i></p>
     </main>
 
     <footer>

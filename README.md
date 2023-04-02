@@ -44,10 +44,10 @@ Then in your request handlers, call `res.render()` as you normally would.
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', function (req, res) {
-  res.render('pages/index', {
-    name: 'Tinky Winky',
-    path: req.path,
-  });
+	res.render('pages/index', {
+		name: 'Tinky Winky',
+		path: req.path,
+	});
 });
 
 const port = 3000;
@@ -78,7 +78,7 @@ to have the view rendered within the layout you specify.
 <footer>
 	<address>
 		Goodbye, <%= name %>.
-    💖, <a href="https://feranmi.dev">Dipsy</a>.
+		💖, <a href="https://feranmi.dev">Dipsy</a>.
 	</address>
 </footer>
 ```
@@ -88,15 +88,15 @@ to have the view rendered within the layout you specify.
 
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
 		<title>
 			<%= title %>
 		</title>
 		<meta name="description" content="Greetings for <%= name %>.">
-  </head>
-  <body>
-    <%- content %>
-  </body>
+	</head>
+	<body>
+		<%- content %>
+	</body>
 </html>
 ```
 
@@ -107,26 +107,26 @@ at the root path `/`, it will respond with the following HTML.
 <!-- Final Output -->
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
 		<title>
 			Hello, world!
 		</title>
 		<meta name="description" content="Greetings for Laa Laa.">
-  </head>
+	</head>
 
-  <body>
-    <main>
-      <h1>Hello, Tinky Winky!</h1>
-      <p>You are here: <i>/</i></p>
-    </main>
+	<body>
+		<main>
+			<h1>Hello, Tinky Winky!</h1>
+			<p>You are here: <i>/</i></p>
+		</main>
 
-    <footer>
-      <address>
-        Goodbye, Tinky Winky.
-        💖, <a href="https://feranmi.dev">Dipsy</a>.
-      </address>
-    </footer>
-  </body>
+		<footer>
+			<address>
+				Goodbye, Tinky Winky.
+				💖, <a href="https://feranmi.dev">Dipsy</a>.
+			</address>
+		</footer>
+	</body>
 </html>
 ```
 

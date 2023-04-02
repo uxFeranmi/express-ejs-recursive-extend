@@ -25,7 +25,7 @@ var ejs  = require('ejs'),
  * @todo Compare paths between each call in the recursion chain to prevent a circular dependency.
  *
  * @param {string} viewPath - The file path of the view to be rendered.
- * @param {object} options - Object containing variables to be used when rendering the view template.
+ * @param {object} _viewData - Object containing variables to be exposed to the template(s).
  * @param {function(Error, string?)} onRenderingCompleted - Callback function used to pass the
  *  rendered HTML to the Express Server after rendering is completed.
  */

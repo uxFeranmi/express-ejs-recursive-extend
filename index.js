@@ -35,7 +35,7 @@ function renderEjsWithLayouts(viewPath, _viewData, onRenderingCompleted) {
 
   // Inject the `extend` function into the view.
   viewData.extend = function extendEjsLayout(layoutPath, layoutData = {}) {
-    console.log('Called `extend`.');
+    // console.log('Called `extend`.');
     if (!layoutPath) throw new Error('Missing filepath for EJS layout to extend.');
 
     // When `extend` is called, simply store the layout path and the data, then let rendering continue.
@@ -47,8 +47,8 @@ function renderEjsWithLayouts(viewPath, _viewData, onRenderingCompleted) {
 
   // Render the view, with the `extend` function injected.
   ejs.renderFile(viewPath, viewData, function afterViewRendered(error, renderedHtml) {
-    console.log('Rendered a view');
-    console.log({ layout });
+    // console.log('Rendered a view');
+    // console.log({ layout });
     if (error) return onRenderingCompleted(error);
 
     // If `extend` was never called in the view, then we simply pass on the view's rendered HTML.
@@ -71,7 +71,7 @@ function renderEjsWithLayouts(viewPath, _viewData, onRenderingCompleted) {
     // Render the layout with the rendered content of the view,
     // recursively handling any `extend` call within the layout as well.
     // ejs.renderFile(layout, options, callback);
-    console.log('Rendering extended layout');
+    // console.log('Rendering extended layout');
     renderEjsWithLayouts(layoutPath, layoutData, onRenderingCompleted);
   });
 };

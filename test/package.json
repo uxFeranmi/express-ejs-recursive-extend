@@ -1,0 +1,12 @@
+{
+  "name": "test-ejs-with-layouts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs-with-layouts": "file:.."
+  }
+}

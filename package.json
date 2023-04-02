@@ -1,6 +1,6 @@
 {
   "name": "ejs-with-layouts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds support for Nested Layouts to EJS templates. Compatible with Express.js.",
   "keywords": [
     "express",
@@ -13,10 +13,11 @@
   },
   "nodemonConfig": {
     "watch": [
-      "index.js",
-      "test/**/*.js",
-      "test/**/*.ejs"
-    ]
+      "**/*.js",
+      "**/*.ejs"
+    ],
+    "ignore": ["**/node_modules/**"],
+    "ext": "js,json,ejs"
   },
   "homepage": "https://github.com/uxFeranmi/express-ejs-recursive-extend",
   "bugs": {

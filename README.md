@@ -169,7 +169,6 @@ This allows for the creation of nested layouts.
 Currently, only one layout is supported per file.
 If `extend` is called more that once in a single file, only the last call will be used.
 
-<!-- Edit -->
 ## License
 
 This project is released under the [MIT license](./LICENSE.txt).
